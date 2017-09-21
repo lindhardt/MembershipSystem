@@ -9,13 +9,26 @@ namespace MembershipSystem.Models
     {
         protected override void Seed(MembershipContext context)
         {
-            var role = new Role
+            var roles = new List<Role>
             {
-                Name = "Member"
+                new Role
+                {
+                    Name = "Formand"
+                },
+               
+                new Role
+                {
+                    Name = "Næsteformad"
+                },
+
+                new Role
+                {
+                    Name = "Sekretær"
+                },
+
             };
 
-            context.Roles.Add(role);
-
+            context.Roles.AddRange(roles);
             context.SaveChanges();
 
             var users = new List<User>
@@ -40,7 +53,7 @@ namespace MembershipSystem.Models
 
             context.SaveChanges();
 
-            users.ForEach(user => user.Roles.Add(new UserRole { RoleId = role.RoleId, UserId = user.UserId}));
+            users.ForEach(user => user.Roles.Add(new UserRole { RoleId = roles.First().RoleId, UserId = user.UserId}));
 
             context.SaveChanges();
 

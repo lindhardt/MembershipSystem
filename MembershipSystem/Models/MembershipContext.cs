@@ -29,5 +29,9 @@ namespace MembershipSystem.Models
 
             modelBuilder.Entity<UserClaim>().HasKey(k => k.UserId).ToTable("UserClaims");
         }
+
+        public System.Data.Entity.DbSet<MembershipSystem.Models.UserClaim> UserClaims { get; set; }
+
+        public System.Data.Entity.DbSet<MembershipSystem.Models.UserLogin> UserLogins { get; set; }
     }
 }   
