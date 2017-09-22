@@ -15,4 +15,16 @@ select,
 textarea {
     max-width: 280px;
 }
-
+section {
+    padding-top: 10px;/*mwuhahahahahaha*/
+    min-height: 300px;
+    width: 1024px;
+}
+section img {
+    /*height: 300px;
+    width: 300px;*/
+}
+.rescale {
+    height: 229px;
+    width: 448px;
+}
