@@ -18,10 +18,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Badmintonklubben fjer", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                <li>@Html.ActionLink("Login", "Index", "UserLogins")</li>
-                @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
-                @*<li>@Html.ActionLink("Opret person", "Index", "Person")</li>*@
+                @Html.ActionLink("Badmintonklubben fjer", "Index", "Home",  new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Login", "Index", "UserLogins",            new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Opret bruger", "Index", "Users",          new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Opret roller", "Index", "Roles",          new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Opret reservation", "Index", "Reservations", new { area = "" }, new { @class = "navbar-brand" })
+                
 
             </div>
             <div class="navbar-collapse collapse">
